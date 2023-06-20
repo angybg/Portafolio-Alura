@@ -41,15 +41,95 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-section.menu{
-
+.todo{
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/*Sección Title*/
+/******************** HEADER***************************/
+.menu{
+    background-color: aqua;
+    display: flex;
+    padding: 32px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.menu__header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+.menu__header img{
 
-section.title{
+    height: 24px;
+    width: 24px;
 
 }
+.menu__list{
+    display: flex;
+    margin: 0 0 0 14px;
+    flex-direction: row;
+    gap: 32px;
+}
+.menu__list__item{
+    display: flex;
+    justify-content: space-around;
+}
+.menu__list__item:last-child{
+    font-weight: 700;
+}
+/********************FIN HEADER********************/
+
+/******************** TITLE ********************/
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title__div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+    background-color: blueviolet;
+}
+.title__profile{
+    display: flex;
+    order: 1;
+    
+}
+.title__container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.title__bio{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+    margin-bottom: 0;
+}
+.title__subsection{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 24px 0;
+}
+.title__network{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 32px;    
+}
+.fa-brands{
+
+}
+/********************FIN TITLE********************/
 
 /*Sección About*/
 
