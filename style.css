@@ -46,6 +46,7 @@ https://en.bem.info/methodology/quick-start/*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f5f5f5;
 }
 
 /******************** HEADER***************************/
@@ -89,6 +90,7 @@ https://en.bem.info/methodology/quick-start/*/
 .title{
     display: flex;
     justify-content: center;
+    background-color: red;
 }
 .title__div{
     display: flex;
@@ -126,21 +128,107 @@ https://en.bem.info/methodology/quick-start/*/
     padding: 0;
     gap: 32px;    
 }
-.fa-brands{
 
-}
 /********************FIN TITLE********************/
 
 /*Sección About*/
 
-section.about{
 
+.about{
+    display: flex;
+    justify-content: center;    
+    background-color: coral;
+    align-items: center;
+    padding: 55px 0px;
+}
+.about__container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    padding: 0;
+} 
+.about__title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px; 
+}
+.about__paragraph{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 60%; 
+} 
+.about__container img{
+    width: 140px;
+    height: 52px;
 }
 
 /*Sección Hobbies*/
 
-section.hobbies{
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;    
+    width: 80vw;
+}
+
+.skills__title{
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    line-height: 38px;
+    color: #464646;
+}
+.skills__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    width: 12%;
+    min-width: 115px;
+    height: 125px;
+	text-align: center;
+	transition: .3s;
+	box-shadow: 2px 2px 2px #CCC;
+	position: relative;
+    cursor: pointer;
     
+}
+.skills__box:hover{
+    box-shadow: 4px 4px 4px #ccc;
+}
+.skills__box ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+    margin: 0;
+}
+.skills__img{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 0;
+
+    /* text-align: center; */
+}
+.skills__name{
+
 }
 
 /* Experiencia Académica*/
