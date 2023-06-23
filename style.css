@@ -9,6 +9,7 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --color: #D2B4DE;
 }
 
 body {
@@ -46,7 +47,6 @@ https://en.bem.info/methodology/quick-start/*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f5f5f5;
 }
 
 /******************** HEADER***************************/
@@ -64,11 +64,14 @@ https://en.bem.info/methodology/quick-start/*/
     flex-direction: row;
     gap: 8px;
 }
-.menu__header img{
+/* .menu__header i{
 
     height: 24px;
     width: 24px;
 
+} */
+.menu__title{
+    text-shadow: 0 0 8px #d2b4;
 }
 .menu__list{
     display: flex;
@@ -79,23 +82,38 @@ https://en.bem.info/methodology/quick-start/*/
 .menu__list__item{
     display: flex;
     justify-content: space-around;
+    
+}
+.menu__list__item a{
+    transition: .3s;
+}
+.menu__list__item a:hover{
+    color: #9B59B6;
+    font-size: 18px;
+    text-shadow: 0 0 8px #d2b4;
 }
 .menu__list__item:last-child{
     font-weight: 700;
 }
+
+
 /********************FIN HEADER********************/
 
 /******************** TITLE ********************/
 .title{
     display: flex;
     justify-content: center;
+    /* gap: 200px; */
+    margin-bottom: 50px;
+    width: 100%;
 }
 .title__div{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 80%;
     align-items: center;
+    /* max-width: 80%; */
 }
 .title__profile{
     display: flex;
@@ -103,15 +121,34 @@ https://en.bem.info/methodology/quick-start/*/
     
 }
 .title__container{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: left; */
+    color: #4A235A;
+}  
+.title__profile
+{
+    display: flex;
+    order: 1;
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 500px;
+
+}
+.title__profile
+{
+    display: flex;
+    order: 1;
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 50%;
+
 }
 .title__bio{
     font-weight: 700;
     font-size: 52px;
-    line-height: 61px;
-    margin-bottom: 0;
+    /* line-height: 61px;
+    margin-bottom: 0; */
 }
 .title__subsection{
     font-size: 22px;
@@ -119,11 +156,29 @@ https://en.bem.info/methodology/quick-start/*/
     line-height: 26px;
     margin: 24px 0;
 }
+.title__subsection2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 6px;
+    margin: 0 0 24px 0;
+}
 .title__network{
     display: flex;
     flex-direction: row;
     padding: 0;
     gap: 32px;    
+}
+.title__network__item{
+    
+    font-size: 15px;
+}
+.title__network__item a:hover{
+    color: #9B59B6;
+}
+
+ .title__network__item a i{
+    
+    font-size: 26px;
 }
 
 /********************FIN TITLE********************/
@@ -132,11 +187,12 @@ https://en.bem.info/methodology/quick-start/*/
 
 
 .about{
-    background-color: #eaf2fd;
+    background-color: var(--color);
     display: flex;
     justify-content: center;    
     align-items: center;
     padding: 55px 0px;
+    width: 100%;
 }
 .about__container{
     display: flex;
@@ -170,7 +226,7 @@ https://en.bem.info/methodology/quick-start/*/
     align-items: center;
     padding: 0px;
     gap: 32px;    
-    width: 80vw;
+    width: 100vw;
     margin: 5% 0 3% 0;
 }
 
@@ -188,7 +244,7 @@ https://en.bem.info/methodology/quick-start/*/
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    width: 100%;
+    width: 80%;
 }
 .skills__box{
     background-color: white;
@@ -209,7 +265,7 @@ https://en.bem.info/methodology/quick-start/*/
     border-radius: 12px;
 }
 .skills__box:hover{
-    box-shadow: 4px 4px 4px #ccc;
+    box-shadow: 4px 4px 4px var(--color);
 }
 .skills__box ul{
     display: flex;
@@ -224,6 +280,13 @@ https://en.bem.info/methodology/quick-start/*/
     padding: 0;
     gap: 0;
 }
+.fa-html5, .fa-square-js, .fa-git-alt, .fa-mobile-screen, .fa-css3-alt, .fa-laptop{
+    display: flex;
+    padding: 12px 0 ;
+    justify-content: flex-start;
+    color:#9B59B6;
+}
+
 .skills__name{
     font-weight: 700;
     font-size: 16px;
@@ -236,7 +299,7 @@ https://en.bem.info/methodology/quick-start/*/
     align-items: center;
     padding: 0px;
     gap: 32px;    
-    width: 80vw;
+    width: 100vw;
     margin: 5% 0 3% 0;
 }
 
@@ -254,7 +317,7 @@ https://en.bem.info/methodology/quick-start/*/
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    width: 100%;
+    width: 80%;
 }
 .soft__skills__box{
     background-color: white;
@@ -275,7 +338,7 @@ https://en.bem.info/methodology/quick-start/*/
     border-radius: 12px;
 }
 .soft__skills__box:hover{
-    box-shadow: 4px 4px 4px #ccc;
+    box-shadow: 4px 4px 4px var(--color);
 }
 .soft__skills__box ul{
     display: flex;
@@ -290,6 +353,17 @@ https://en.bem.info/methodology/quick-start/*/
     padding: 0;
     gap: 0;
 }
+.fa-heart, .fa-users-viewfinder, .fa-people-group, .fa-comments, .fa-resolving, .fa-star{
+    display: flex;
+    padding: 12px 0 ;
+    justify-content: flex-start;
+    color: #9B59B6;
+}
+.fa-users-rectangle{
+    display: flex;
+    padding: 12px 0;
+    justify-content: flex-start;
+}
 .soft__skills__name{
     font-weight: 700;
     font-size: 16px;
@@ -303,7 +377,7 @@ https://en.bem.info/methodology/quick-start/*/
     align-items: center;
     padding: 0px;
     gap: 32px;    
-    width: 80vw;
+    width: 100vw;
     margin: 0 0 5% 0;
 }
 .hobbies__title{
@@ -320,7 +394,7 @@ https://en.bem.info/methodology/quick-start/*/
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    width: 100%;
+    width: 80%;
 }
 .hobbies__box{
     background-color: white;
@@ -342,7 +416,7 @@ https://en.bem.info/methodology/quick-start/*/
     
 }
 .hobbies__box:hover{
-    box-shadow: 4px 4px 4px #ccc;
+    box-shadow: 4px 4px 4px var(--color);
 }
 .hobbies__box ul{
     display: flex;
@@ -359,6 +433,12 @@ https://en.bem.info/methodology/quick-start/*/
 
     /* text-align: center; */
 }
+.fa-book-open-reader, .fa-language, .fa-kitchen-set, .fa-gamepad, .fa-headphones, .fa-tv{
+    display: flex;
+    padding: 12px 0 ;
+    justify-content: flex-start;
+    color: #9B59B6;
+}
 .hobbies__name{
     font-weight: 700;
     font-size: 16px;
@@ -367,7 +447,7 @@ https://en.bem.info/methodology/quick-start/*/
 /************************ Experiencia Académica**********************/
 
 .academic{
-    background-color: #eaf2fd;
+    background-color: var(--color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -419,8 +499,26 @@ https://en.bem.info/methodology/quick-start/*/
     gap: 25px; 
     background: #ffffff;
     border-radius: 12px;
+    /* max-width: 190px;*/
+    max-height: 130px; 
+    align-items: center;
     /* width: 100%;
     height: 130px; */
+}
+.img1 img{
+    display: flex;
+    max-width: 190px;
+    max-height: 130px;
+    width: 174px;
+    padding: 38px 10px 46px 6px;
+}
+.img2 img{
+    display: flex;
+    max-width: 190px;
+    max-height: 130px;
+    width: 174px;
+    height:130px;
+    padding: 5px 10px 0.9px 6px;
 }
 .academic__courses__item__title{
     margin-top: 10px;
@@ -440,33 +538,155 @@ https://en.bem.info/methodology/quick-start/*/
 }
 /* experiencia*/
 
-section.experience{
-
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+.experience__section__title{
+    font-size: 32px;
+    color: var(--preto-100, #464646);
+    text-align: center;
+    font-weight: 700;
+    gap: 16px;
+    margin: 32px 0px 8px;
+}
+.experience__box{
+    display: flex;
+    width: 80%;
+    gap: 32px;
+    padding: 2%;
+    /*justify-content: space-between; */
+    align-items: center;
+}
+.experience__img{
+    display: flex;
+    align-self: stretch;
+    flex-shrink: 0;
+    width: 69%;
 }
 
+
+.derecha{
+    order:1;
+}
+
+.experience__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 30%;
+    flex: 1 0 0;
+}
+.experience__title{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    font-size: 22px;
+    font-weight: 700;
+    gap: 8px;
+    margin: 0;
+}
+.experience__text{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.experience__description{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+.experience__repo{
+    border: 1px solid #9B59B6;
+    box-shadow: 2px 2px 2px #CCC;
+    transition: .3s;
+    
+}
+.experience__repo:hover{
+    box-shadow: 2px 2px 2px #CCC;
+    transform: scale(1.01);
+}
+.experience__demo{
+    box-shadow: 2px 2px 2px #CCC;
+    transition: .3s;
+}
+
+.experience__boton{
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #9B59B6;
+    border: 1px solid var(--azul-100, #9B59B6);
+    
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    /* border-radius: 5px; */
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.experience__boton2{
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--azul-100, #9B59B6);
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    /* border-radius: 5px; */
+    transition: 1s all;
+    cursor: pointer;
+}
+.experience__demo:hover{
+    
+    transform: scale(1.1);
+}
 /*Contacto*/
 
 .formcontato{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #eaf2fd;
+    background-color: var(--color) ;
     width: 100%;
-    padding: 64px;
+    padding: 64px 0px;
 }
 .formcontato__contacto{
     display: flex;
     width: 80%;
+    max-width: 80%;
     padding: 64px 0px 0px 0px;
     align-items: center;
     gap: 16px;
+    justify-content: space-between;
 }
-.formcontato--esquerda{
-
+.formcontato__izquierda{
+    display: flex;
+    justify-content: flex-start;
 }
 
 .formcontato__img{
+    min-width: 324px;
+    min-height: 440px;
     width: 100%;
     height: 100%;
 }
@@ -474,9 +694,8 @@ section.experience{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
-    flex: 1 0 0;
     margin-top: 0;
+    gap: 24px;
 }
 .formcontato__title{
     display: flex;
@@ -485,8 +704,8 @@ section.experience{
     font-family: Raleway;
     font-weight: 700;
     margin: 0;
-    line-height: 0%;
-    margin-top: 0;
+    line-height: 0;
+    margin-bottom: 10px;
 
 }
 .formcontato__subtext{
@@ -503,7 +722,7 @@ section.experience{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 25px;
     align-self: stretch;
 }
 form label{
@@ -511,20 +730,21 @@ form label{
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    
-    
 }
 .formcontato__input{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 28px;
+    padding: 6px;
     align-self: stretch;
-    width: 100%;
+    width: 98.5%;
     height: 40px;
     border: 0;
     box-shadow: 2px 2px 2px #CCC;
     border-radius: 8px;
+/* 
+    padding: 10px 25px; */
 }
 .formcontato__textarea{
     display: flex;
@@ -532,18 +752,33 @@ form label{
     justify-content: flex-end;
     align-items: flex-start;
     align-self: stretch;
-    width: 100%;
+    width: 100%;/*98%*/
     border: 0;
+    height: 160px;
     box-shadow: 2px 2px 2px #CCC;
     border-radius: 8px;
+    resize: none;
+    margin-bottom: 10px;
 }
+.formcontato__input:hover, .formcontato__textarea:hover{
+    /* text-emphasis-color: #2a7ae4; */
+    color: #9B59B6;
+    box-shadow: 2px 2px 2px #9B59B6 ;
+}
+.formcontato__input:focus, .formcontato__textarea:focus{
+    /* border-color: #2a7ae4; */
+    box-shadow: 4px 4px 4px var(--color);
+    color: var(--color);
+    outline: none;
+}
+
 .formcontato__boton{
     display: flex;
     padding: 16px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: var(--azul-100, #2a7ae4);
+    background-color: var(--azul-100, #9B59B6);
     color: white;
 
     width: 40%;
@@ -559,8 +794,12 @@ form label{
 }
 /*footeer*/
 
-section.footer{
-   
+.footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+    line-height: 5px;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -604,5 +843,4 @@ Utiliza las referencias de los breakpoints @media abajo */
  /*Contacto*/
 
 /*Footer*/
-
 }
