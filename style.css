@@ -812,7 +812,7 @@ form label{
 
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .menu nav ul li:nth-child(-n+6){
         display: none;
     }
@@ -944,5 +944,14 @@ form label{
     .title__network__item{
         line-height: 20px;
         font-size: 12px;
+    }
+    .skills__box{
+        width: 85%;
+    }
+    .soft__skills__box{
+        width: 85%;
+    }
+    .hobbies__box{
+        width: 85%;
     }
 }
