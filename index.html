@@ -45,7 +45,7 @@
                         <li class="title__network__item"><a href="https://github.com/angybg" target="_blank"><i class="fa-brands fa-github-alt fa-xl"></i> Github</a></li>
                         <li class="title__network__item"><a href="https://www.linkedin.com/in/angybg/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i> LinkedIn</a></li>
                         <!-- <li class="title__network__item"><a href="">Instagram <img src="assets\arrow.png"></a></li> -->
-                        <li class="title__network__item"><a href="ACTA-DE-EXAMEN-PROFESIONAL.pdf" download="ACTA-DE-EXAMEN-PROFESIONAL.pdf"><i class="fa-solid fa-file-pdf fa-xl"></i> Curriculum</a></li>
+                        <li class="title__network__item"><a href="CV_AGBG.pdf" download="CV_AGBG.pdf"><i class="fa-solid fa-file-pdf fa-xl"></i> Curriculum</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="about__container">
                 <h3 class="about__title">Sobre mi</h3>
                 <p class="about__paragraph">Soy formada en Ingeniería en Ciencias de la Computación de la Facultad de Ciencias de la Computación de la BUAP y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
-                <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
+                <p class="about__paragraph">Apasionada por la tecnología, desarrollo web y seguridad en la red.</p>
                 <!-- Si quieres, pon tú firma acá! -->
                 <img src="assets\signature.png">
             </div>
@@ -142,7 +142,7 @@
 
             <div class="soft__skills__box">
                 <ul>
-                    <li class="soft__skills__img"> <i class="fa-brands fa-resolving fa-xl"></i> </li>
+                    <li class="soft__skills__img"> <i class="fa-regular fa-lightbulb fa-xl"></i> </li>
                     <li class="soft__skills__name">Resolución</li>
                 </ul>
             </div>
@@ -304,11 +304,28 @@
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
                     <form class="formcontato__form" name="form">
-                        <label for="nombre"><input class="formcontato__input" type="text" name="nombre" placeholder="Nombre" id="nombre"></label>
-                        <label for="email"><input class="formcontato__input" type="email" name="email" placeholder="E-mail"></label>
-                        <label for="asunto"><input class="formcontato__input" type="text" name="asunto" placeholder="Asunto"></label>
-                        <label for="mensaje"><textarea class="formcontato__textarea" rows="5" cols="50" id="mensagem" name="mensaje" placeholder=" Mensaje"></textarea></label>
-                        <button type="submit" class="formcontato__boton">Enviar mensaje</button>
+                        <div class="contacto__container contacto__name__container">
+                            <input class="formcontato__input input peer input-invalid"  type="text" name="nombre" placeholder="Nombre" id="nambre" required minlength="10" maxlength="30" data-type="nombre" pattern="^[a-zA-Z\s]{2,50}" title="Ingrese solamente letras">
+                            <!-- <label for="nombre"></label> -->
+                            <span class="input-message-error"></span>
+                        </div>
+                        <div class="contacto__container"> 
+                            <input class="formcontato__input input peer input-invalid" type="email" name="email" id="correo" placeholder="E-mail" required data-type="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" title="ejemplo@dominio.com">
+                            <!-- <label for="email"></label> -->
+                            <span class="input-message-error"></span>
+                        </div>
+                        <div class="contacto__container">
+                            
+                            <input class=" input formcontato__input input peer input-invalid" type="text" name="asunto" id="subject" placeholder="Asunto" required data-type="asunto" pattern="^[a-zA-Z\s]{5,30}">
+                            <!-- <label for="asunto"></label> -->
+                            <span class="input-message-error"></span>
+                        </div>
+                        <div class="contacto__container">
+                            <textarea class=" input formcontato__textarea" rows="5" cols="50" id="mensagem" name="mensaje" type="text" placeholder=" Mensaje" required minlength="10" maxlength="300" data-type="mensaje"></textarea>
+                            <!-- <label for="mensaje"></label> -->
+                            <span class="input-message-error errorspan"></span>
+                        </div>
+                        <button type="submit" class="formcontato__boton" id="butonsend">Enviar mensaje</button>
                     </form>
                 </div>
             </div>
@@ -329,6 +346,6 @@
         </section>
     </div>
     <!-- Script del documento JavaScript -->
-    <script src="validacion.js"></script>
+    <script src="/validacion.js"></script>
 </body>
 </html>
